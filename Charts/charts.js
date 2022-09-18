@@ -49,8 +49,7 @@ function buildMetadata(sample) {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
 
-  });
-}
+ 
 
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
@@ -101,11 +100,6 @@ function buildCharts(sample) {
 // Bar and Bubble charts Deliverable 2
 // Create the buildCharts function.
 
-function buildCharts(sample) {
-
-    // Use d3.json to load and retrieve the samples.json file 
-    d3.json("samples.json").then((data) => {
-      
   
       // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
       Plotly.newPlot(); 
@@ -127,21 +121,15 @@ function buildCharts(sample) {
       var bubbleLayout = {
         title: "<b>Bacteria Cultures Per Sample</b>",
         xaxis:{title: "OTU ID"},
+        automargin: true,
         hovermode: 'closest',
-        width: 1145
       };
   
       // 3. Use Plotly to plot the data with the layout.
       Plotly.newPlot('bubble', bubbleData, bubbleLayout);
-    });
-}
+
 // Create the buildChart function. 
 // Deliverable 3
-
-function buildCharts(sample) {
-  // Use d3.json to load the samples.json file 
-  d3.json("samples.json").then((data) => {
-    console.log(data);
 
     // Create a variable that holds the samples array. 
     // Create a variable that filters the samples for the object with the desired sample number.
@@ -164,7 +152,7 @@ function buildCharts(sample) {
 
     // Create the yticks for the bar chart.
     //var yticks = ids.map(sampleObj => "OTU " + sampleObj).slice(0,10).reverse();
-    console.log(yticks)
+    //console.log(yticks)
     // Use Plotly to plot the bar data and layout.
     Plotly.newPlot('bar',barData, barLayout);
     
