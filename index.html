@@ -1,38 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFO Finder</title>
-<link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous"
-  />
-  <link rel="stylesheet" href="static/css/style.css">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style type="text/css">
+    .bg-cover {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.295) 100%,rgba(255,255,255,0.9) 0%), url('https://github.com/amylio/BellyButtonBiodiversity/blob/main/Images/antibiotic-resistance-food_456px.jpg?raw=true');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+  </style>
 </head>
-<body class="bg-dark">
-    <div class="wrapper">
-        <nav class="navbar navbar-dark bg-dark navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.html">UFO Sightings</a>
-        </nav>
-        <div class="jumbotron">
-            <h1 class="display-4">The Truth Is Out There</h1>
+
+<body>
+  <body style="background:linear-gradient(to bottom right, #666699 0%, #ffffcc 104%)"></body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron jumbotron bg-cover text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p><b>Use the interactive charts below to explore the dataset</b></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5><b>Test Subject ID No.:</b></h5>
+          <p><small>Select from the dropdown to update chart contents<br></small></p>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
           </div>
-          <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>UFO Sightings: Fact or Fancy? <small>Ufologists Weigh In</small></h3>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Are we alone in the universe? For millennia, humans have turned to the sky to answer this question. Now, thanks to research generously funded by W. Avy, 
-                        a UFO-enthusiast and amateur ufologist, we can supplement our sky-searching with data analysis.
-                        <br><br>
-                        "The release of this analysis is well-timed: It coincides with the celebration of World UFO Day, which is a moment for ufologists around the world to connect, 
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p><b><center>Represents the top 10 bacteria cultures found based on volume identified by ID, name and sample volume.</center></b></p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p><b><center>Reported frequency in which the sample area was washed. Subjects that had a lower frequency of washes provided a higher concentration of cultures available for sampling.</center></b></p>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p><b><center>Representation of the cultures that were collected. The higher the volume of samples, the larger the bubbles.</center></b></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="Charts/charts.js"></script>
+
+</body>
+
+</html>
                         relax, and sample a range of UFO-themed snacks," said Dr. Ursula F. Olivier, the world's preeminent expert on circular sightings. "Citizen-scientists can be 
                         especially helpful in both cataloguing sightings—which is hugely helpful for us in our search for aliens—and in helping us celebrate the work that has already been done, 
                         such as this data visualization project, which will help us raise awareness of the ubiquity of sightings!"
