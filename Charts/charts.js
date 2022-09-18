@@ -93,7 +93,7 @@ function buildCharts(sample) {
         height: 400, 
     };
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot('bar',[barData], barLayout);
+    Plotly.newPlot('bar',barData, barLayout);
   });
 }
 // Bar and Bubble charts Deliverable 2
@@ -125,7 +125,7 @@ function buildCharts(sample) {
       };
   
       // 3. Use Plotly to plot the data with the layout.
-      Plotly.newPlot('bubble', [bubbleData], bubbleLayout);
+      Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
 // Create the buildChart function. 
 // Deliverable 3
@@ -185,6 +185,6 @@ function buildCharts(sample) {
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", [gaugeData], gaugeLayout)
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout)
   });
 }
