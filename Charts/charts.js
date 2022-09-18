@@ -93,7 +93,7 @@ function buildCharts(sample) {
         height: 400, 
     };
     // 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot('bar',barData, barLayout);
+    Plotly.newPlot('bar',[barData], barLayout);
   });
 }
 // Bar and Bubble charts Deliverable 2
@@ -125,7 +125,7 @@ function buildCharts(sample) {
       };
   
       // 3. Use Plotly to plot the data with the layout.
-      Plotly.newPlot('bubble', bubbleData, bubbleLayout);
+      Plotly.newPlot('bubble', [bubbleData], bubbleLayout);
 
 // Create the buildChart function. 
 // Deliverable 3
@@ -137,7 +137,7 @@ function buildCharts(sample) {
     var metadata = data.metadata;
     var gaugeArray = metadata.filter(metaObj => metaObj.id == sample);  
     // Create a variable that holds the first sample in the array.
-  
+    
 
     // 2. Create a variable that holds the first sample in the metadata array.
         var gaugeResult = gaugeArray[0];
@@ -176,8 +176,7 @@ function buildCharts(sample) {
             {range: [6, 8], color: "lightgreen"},
             {range: [8, 10], color: "green"}
         ],
-        dtick: 2
-     }
+       }
     }];
     
     // 5. Create the layout for the gauge chart.
@@ -186,6 +185,6 @@ function buildCharts(sample) {
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot("gauge", gaugeData, gaugeLayout)
+    Plotly.newPlot("gauge", [gaugeData], gaugeLayout)
   });
 }
