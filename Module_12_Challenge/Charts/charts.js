@@ -174,7 +174,7 @@ function buildCharts(sample) {
    
     
     // 4. Create the trace for the gauge chart.
-    var gaugeData = [
+    var gaugeData = [{
         value: wfreqs,
         type: "indicator",
         mode: "gauge+number",
@@ -189,9 +189,9 @@ function buildCharts(sample) {
             {range: [4, 6], color: "yellow"},
             {range: [6, 8], color: "lightgreen"},
             {range: [8, 10], color: "green"}
-    ],
+        ],
         dtick: 2
-        }
+     }
     }];
     
     // 5. Create the layout for the gauge chart.
@@ -202,5 +202,3 @@ function buildCharts(sample) {
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout)
   });
-}
-
