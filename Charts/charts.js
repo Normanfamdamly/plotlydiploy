@@ -152,10 +152,10 @@ function buildCharts(sample) {
     // Create the yticks for the bar chart.
     
     // Use Plotly to plot the bar data and layout.
-    //Plotly.newPlot('bar',barData, barLayout);
+    Plotly.newPlot('bar',barData, barLayout);
     
     // Use Plotly to plot the bubble data and layout.
-    //Plotly.newPlot('bubble', bubbleData, bubbleLayout); 
+    Plotly.newPlot('bubble', bubbleData, bubbleLayout); 
    
     
     // 4. Create the trace for the gauge chart.
