@@ -1,7 +1,7 @@
 function init() {
   // Grab a reference to the dropdown select element
   var selector = d3.select("#selDataset");
-
+  fetch(request, {mode: 'cors'});
   // Use the list of sample names to populate the select options
   d3.json("https://github.com/Normanfamdamly/plotlydiploy/blob/main/samples.json").then((data) => {
     var sampleNames = data.names;
