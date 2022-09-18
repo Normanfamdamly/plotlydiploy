@@ -12,9 +12,11 @@ function init() {
         .text(sample)
         .property("value", sample);
     });
-
- });
-}
+    var firstSample = sampleNames[0];
+    buildCharts(firstSample);
+    buildMetadata(firstSample);
+  });
+ }
 // Initialize the dashboard
 init();
 
@@ -46,7 +48,7 @@ function buildMetadata(sample) {
 
 
 // 1. Create the buildCharts function.
-function buildCharts(sample) {
+function buildCharts(newSample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array. 
