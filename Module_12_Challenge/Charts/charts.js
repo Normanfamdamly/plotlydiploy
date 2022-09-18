@@ -27,7 +27,6 @@ function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
   buildCharts(newSample);
-  
 }
 
 // Demographics Panel 
@@ -98,7 +97,7 @@ function buildCharts(sample) {
     // 10. Use Plotly to plot the data with the layout. 
     
   });
-
+}
 // Bar and Bubble charts Deliverable 2
 // Create the buildCharts function.
 
@@ -135,7 +134,7 @@ function buildCharts(sample) {
       // 3. Use Plotly to plot the data with the layout.
       
     });
-  }
+}
 // Create the buildChart function. 
 // Deliverable 3
 
@@ -202,3 +201,4 @@ function buildCharts(sample) {
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot("gauge", gaugeData, gaugeLayout)
   });
+}
