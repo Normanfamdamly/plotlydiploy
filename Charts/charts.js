@@ -49,7 +49,6 @@ function buildMetadata(sample) {
       PANEL.append("h6").text(`${key.toUpperCase()}: ${value}`);
     });
 
- 
 
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
